@@ -1,7 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-
 #define T2INT_OVERFLOW_EN	0x01
 #define T2COUNT_RELOAD		(256-250)
 #define T2NO_CLK			0x00
@@ -24,7 +23,6 @@ void timer2_init( void )
 	t2_t = 0;
     sei();
 }
-
 
 ISR(TIMER2_OVF_vect) // 1ms
 {

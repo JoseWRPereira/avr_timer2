@@ -129,7 +129,7 @@ void lcd_init( void )
 {
     DDRB |= 0x3F;
     PORTB &= ~0x3F;
-
+    _delay_ms(1000);
     LCD_EN(1);
     lcd_instReg( LCD_FUNCTION_SET|LCD_FS_DATA_LENGTH_4|LCD_FS_LINE_NUMBER_2);
     lcd_instReg( LCD_DISPLAY_CONTROL|LCD_DC_DISPLAY_ON|LCD_DC_CURSOR_OFF|LCD_DC_BLINK_OFF );
